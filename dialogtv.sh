@@ -1,5 +1,3 @@
-#
-
 function report_github(){
     dialog --yesno "Can't start stream:\n"'"'"$(echo "$STREAM" | cut -d " " -f2-)"'"'".\nLogin to & create issue on GitHub?" 0 0
     [ $? -eq 0 ] && { 
@@ -7,7 +5,7 @@ function report_github(){
     } && exit
 }
 
-tvlist=$(while read -r url name; do echo "$url $name"°"$name"°"$url"°; done < tvlist; unset IFS)
+tvlist=$(while read -r url name; do echo "$url $name"°"$name"°"$url"°; done < tvlist)
 
 while true
 do
